@@ -20,12 +20,12 @@ local silvermoon = ns.Map({id = 110, settings = true})
 -------------------------------------------------------------------------------
 
 sunstrider_isle.nodes[59404120] = Safari.Cat({
-    parent = map.id,
+    -- parent = map.id,
     pois = {POI({59404120, 61004120})}
 }) -- Cat
 
 silvermoon.nodes[91205600] = Safari.Cat({
-    parent = map.id,
+    -- parent = map.id,
     pois = {POI({91205600, 91805780})}
 }) -- Cat
 

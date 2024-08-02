@@ -46,12 +46,12 @@ map.nodes[37201180] = Safari.GreyMoth({
 }) -- Grey Moth
 
 ammenvale.nodes[37201180] = Safari.GreyMoth({
-    parent = map.id,
+    -- parent = map.id,
     pois = {POI({49205740, 54603200})}
 }) -- Grey Moth
 
 exodar.nodes[60804800] = Safari.Mouse({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             25003360, 35203920, 38802880, 41001980, 41206880, 46202800,

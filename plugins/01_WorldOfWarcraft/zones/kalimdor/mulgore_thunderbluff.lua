@@ -52,7 +52,7 @@ map.nodes[45001140] = Safari.Mouse({
 }) -- Mouse
 
 thunderbluff.nodes[48604000] = Safari.PrairieDog({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             22002600, 24801380, 25001180, 26001320, 30001580, 32001860,

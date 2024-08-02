@@ -109,25 +109,6 @@ L['rep_revered'] = 'Respektvoll'
 L['rep_exalted'] = 'Erfürchtig'
 
 -------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-L['dr_your_best_time'] = 'Deine beste Zeit:'
-L['dr_your_target_time'] = 'Vorgabezeit:'
-L['dr_best_time'] = ' - %s: %.3fs'
-L['dr_target_time'] = ' - %s: %ss / %ss'
-L['dr_normal'] = 'Normal'
-L['dr_advanced'] = 'Fortgeschritten'
-L['dr_reverse'] = 'Umgekehrt'
-L['dr_challenge'] = 'Herausforderung'
-L['dr_reverse_challenge'] = 'Umgekehrte Herausforderung'
-L['dr_storm_race'] = 'Sturmrennen'
-L['dr_bronze'] = 'Beende das Rennen um ' .. ns.color.Bronze('Bronze') .. ' zu erhalten.'
-L['dr_vendor_note'] = 'Tausche {currency:2588} gegen Drachenwächtermanuskripte und Ausrüstungsvorlagen ein.'
-L['options_icons_dragonrace'] = 'Drachenrennen'
-L['options_icons_dragonrace_desc'] = 'Zeigt die Positionen der Drachenrennen an.'
-
--------------------------------------------------------------------------------
 --------------------------------- CONTEXT MENU --------------------------------
 -------------------------------------------------------------------------------
 

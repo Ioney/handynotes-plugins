@@ -109,25 +109,6 @@ L['rep_revered'] = 'Reverenciado'
 L['rep_exalted'] = 'Exaltado'
 
 -------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-L['dr_your_best_time'] = 'Tu mejor tiempo:'
-L['dr_your_target_time'] = 'Tu mejor tiempo:'
-L['dr_best_time'] = ' - %s: %.3fs'
-L['dr_target_time'] = ' - %s: %ss / %ss'
-L['dr_normal'] = 'Normal'
-L['dr_advanced'] = 'Avanzado'
-L['dr_reverse'] = 'Inverso'
-L['dr_challenge'] = 'Desafío'
-L['dr_reverse_challenge'] = 'Desafío Inverso'
-L['dr_storm_race'] = 'Carrera de la Tormenta'
-L['dr_bronze'] = 'Acaba la carrera para conseguir el ' .. ns.color.Bronze('Bronce') .. '.'
-L['dr_vendor_note'] = 'Intercambia {currency:2588} por manuscritos de dracovigía y transfiguraciones.'
-L['options_icons_dragonrace'] = 'Carreras de Dragones'
-L['options_icons_dragonrace_desc'] = 'Muestra dónde están todas las Carreras de Dragones de la zona.'
-
--------------------------------------------------------------------------------
 --------------------------------- CONTEXT MENU --------------------------------
 -------------------------------------------------------------------------------
 

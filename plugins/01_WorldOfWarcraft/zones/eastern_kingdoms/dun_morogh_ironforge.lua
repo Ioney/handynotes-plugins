@@ -45,7 +45,7 @@ map.nodes[55404560] = Safari.AlpineHare({
 }) -- Alpine Hare
 
 new_tinkertown.nodes[46404640] = Safari.AlpineHare({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             31404600, 31804600, 36007240, 37808160, 38607380, 39206920,
@@ -58,7 +58,7 @@ new_tinkertown.nodes[46404640] = Safari.AlpineHare({
 }) -- Alpine Hare
 
 coldridge_valley.nodes[56204860] = Safari.AlpineHare({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             30403460, 41206840, 56204860, 60205380, 62005420, 67405380,
@@ -77,7 +77,7 @@ map.nodes[27203600] = Safari.IrradiatedRoach({
 }) -- Irradiated Roach
 
 ironforge.nodes[42808040] = Safari.LongTailedMole({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             21204560, 21602320, 21604740, 22002360, 22401720, 22401800,
@@ -117,7 +117,7 @@ map.nodes[56803660] = Safari.SnowCub({
 }) -- Snow Cub
 
 new_tinkertown.nodes[48605740] = Safari.SnowCub({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             35206860, 39406740, 39806720, 40006800, 41403540, 41403600,
@@ -127,7 +127,7 @@ new_tinkertown.nodes[48605740] = Safari.SnowCub({
 }) -- Snow Cub
 
 coldridge_valley.nodes[62405020] = Safari.SnowCub({
-    parent = map.id,
+    -- parent = map.id,
     pois = {POI({56002980, 62405020, 67605680})}
 }) -- Snow Cub
 
@@ -136,7 +136,7 @@ coldridge_valley.nodes[62405020] = Safari.SnowCub({
 -------------------------------------------------------------------------------
 
 new_tinkertown.nodes[45605280] = ns.node.CrazyForCats({
-    parent = map.id,
+    -- parent = map.id,
     id = 68838,
     rewards = {
         ns.reward.Achievement({id = 8397, criteria = 23585, oneline = true}),
@@ -150,25 +150,3 @@ new_tinkertown.nodes[45605280] = ns.node.CrazyForCats({
         })
     }
 }) -- Fluxfire Feline
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[10001000] = ns.node.Dragonrace({
-    label = '{quest:76445}',
-    normal = {2316, 1000, 999},
-    advanced = {2346, 1000, 999},
-    reverse = {2376, 1000, 999},
-    rewards = {
-        Achievement({id = 18566, criteria = 8, oneline = true}), -- normal bronze
-        Achievement({id = 18567, criteria = 8, oneline = true}), -- normal silver
-        Achievement({id = 18568, criteria = 8, oneline = true}), -- normal gold
-        Achievement({id = 18569, criteria = 8, oneline = true}), -- advanced bronze
-        Achievement({id = 18570, criteria = 8, oneline = true}), -- advanced silver
-        Achievement({id = 18571, criteria = 8, oneline = true}), -- advanced gold
-        Achievement({id = 18572, criteria = 8, oneline = true}), -- reverse bronze
-        Achievement({id = 18573, criteria = 8, oneline = true}), -- reverse silver
-        Achievement({id = 18574, criteria = 8, oneline = true}) -- reverse gold
-    }
-}) -- Ironforge Interceptor

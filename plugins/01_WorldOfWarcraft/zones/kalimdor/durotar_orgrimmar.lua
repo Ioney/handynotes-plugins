@@ -56,7 +56,7 @@ map.nodes[48202680] = Safari.CreepyCrawly({
 }) -- Creepy Crawly
 
 orgrimmar.nodes[50607940] = Safari.DungBeetle({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             30607000, 31005800, 32607540, 34405900, 35204960, 35605000,
@@ -135,7 +135,7 @@ map.nodes[42601740] = Safari.Hare({
 }) -- Hare
 
 valleyoftrials.nodes[34006300] = Safari.Hare({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             32804160, 34006300, 48805960, 50007560, 51805420, 56206160,
@@ -145,7 +145,7 @@ valleyoftrials.nodes[34006300] = Safari.Hare({
 }) -- Hare
 
 orgrimmar.nodes[39608300] = Safari.RoboChick({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             38008660, 38208620, 39408240, 39608300, 39808220, 40008060, 40208000
@@ -154,7 +154,7 @@ orgrimmar.nodes[39608300] = Safari.RoboChick({
 }) -- Robo-Chick
 
 orgrimmar.nodes[47807600] = Safari.SpinyLizard({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             34405880, 39403840, 39603820, 40005020, 40606680, 40807560,
@@ -211,7 +211,7 @@ map.nodes[40804040] = Safari.Toad({
 }) -- Toad
 
 orgrimmar.nodes[31606800] = Safari.Toad({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             24806660, 25006640, 30406640, 30406660, 30606640, 30806680,
@@ -251,7 +251,7 @@ map.nodes[40003700] = Safari.WaterSnake({
 }) -- Water Snake
 
 orgrimmar.nodes[37407600] = Safari.WaterSnake({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             24806680, 30606640, 30806680, 31406760, 31606820, 36807500,
@@ -263,25 +263,3 @@ orgrimmar.nodes[37407600] = Safari.WaterSnake({
         })
     }
 }) -- Water Snake
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[56906286] = ns.node.Dragonrace({
-    label = '{quest:75385}',
-    normal = {2318, 85, 80},
-    advanced = {2348, 78, 73},
-    reverse = {2378, 78, 73},
-    rewards = {
-        Achievement({id = 17712, criteria = 7, oneline = true}), -- normal bronze
-        Achievement({id = 17713, criteria = 7, oneline = true}), -- normal silver
-        Achievement({id = 17714, criteria = 7, oneline = true}), -- normal gold
-        Achievement({id = 17715, criteria = 7, oneline = true}), -- advanced bronze
-        Achievement({id = 17716, criteria = 7, oneline = true}), -- advanced silver
-        Achievement({id = 17717, criteria = 7, oneline = true}), -- advanced gold
-        Achievement({id = 17718, criteria = 7, oneline = true}), -- reverse bronze
-        Achievement({id = 17719, criteria = 7, oneline = true}), -- reverse silver
-        Achievement({id = 17720, criteria = 7, oneline = true}) -- reverse gold
-    }
-}) -- Durotar Tour

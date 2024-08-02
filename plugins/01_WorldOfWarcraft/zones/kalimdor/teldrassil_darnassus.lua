@@ -38,12 +38,12 @@ map.nodes[54405260] = Safari.CrestedOwl({
 }) -- Crested Owl
 
 shadowglen.nodes[37807420] = Safari.CrestedOwl({
-    parent = map.id,
+    -- parent = map.id,
     pois = {POI({37807420, 46004380})}
 }) -- Crested Owl
 
 darnassus.nodes[41208160] = Safari.ElfinRabbit({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             32007080, 32604160, 41208160, 42204740, 45008080, 45203540,
@@ -62,7 +62,7 @@ map.nodes[49404740] = Safari.ElfinRabbit({
 }) -- Elfin Rabbit
 
 darnassus.nodes[61205100] = Safari.ForestMoth({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             42404740, 45205000, 46403660, 46603680, 48405640, 53605440,
@@ -98,7 +98,7 @@ map.nodes[47002480] = Safari.RedTailedChipmunk({
 }) -- Red-Tailed Chipmunk
 
 darnassus.nodes[43607060] = Safari.RedTailedChipmunk({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             32404160, 32406080, 32604120, 32604180, 32606080, 37204780,

@@ -202,13 +202,13 @@ end
 local Currency = Class('Currency', Reward, {type = L['currency']})
 
 function Currency:GetText()
-    local info = C_CurrencyInfo.GetCurrencyInfo(self.id)
-    local text = C_CurrencyInfo.GetCurrencyLink(self.id, 0)
+    local info = GetCurrencyInfo(self.id)
+    local text = GetCurrencyLink(self.id, 0)
     text = text .. ' (' .. self.type .. ')'
     if self.note then -- additional info
         text = text .. ' (' .. self.note .. ')'
     end
-    return Icon(info.iconFileID) .. text
+    return Icon(info[3]) .. text
 end
 
 -------------------------------------------------------------------------------
@@ -277,11 +277,11 @@ function Item:Initialize(attrs)
     self.itemLink = L['retrieving']
     self.itemIcon = 'Interface\\Icons\\Inv_misc_questionmark'
     local item = _G.Item:CreateFromItemID(self.item)
-    if not item:IsItemEmpty() then
-        item:ContinueOnItemLoad(function()
-            self.itemLink = item:GetItemLink()
-            self.itemIcon = item:GetItemIcon()
-        end)
+    if not item:IsItemEmpty() then -- this seems broken, always returns false?
+        -- item:ContinueOnItemLoad(function() -- somehow doesnt work
+        self.itemLink = item:GetItemLink()
+        self.itemIcon = item:GetItemIcon()
+        -- end)
     end
 end
 
@@ -294,11 +294,11 @@ function Item:IsObtained()
 end
 
 function Item:GetText()
-    local text = self.itemLink
-    if self.isCosmetic then
-        local type = self.type and ', ' .. self.type or ''
-        text = text .. ' (' .. L['cosmetic'] .. type .. ')'
-    elseif self.type then -- mount, pet, toy, etc
+    local text = self.itemLink or 'item+' .. self.item -- workaround for item ids that dont exist in classic
+    -- if self.isCosmetic then
+    --     local type = self.type and ', ' .. self.type or ''
+    --     text = text .. ' (' .. L['cosmetic'] .. type .. ')'
+    if self.type then -- mount, pet, toy, etc
         text = text .. ' (' .. self.type .. ')'
     end
     if self.count then
@@ -395,7 +395,7 @@ local Quest = Class('Quest', Reward)
 function Quest:Initialize(attrs)
     Reward.Initialize(self, attrs)
     if type(self.id) == 'number' then self.id = {self.id} end
-    C_QuestLog.GetTitleForQuestID(self.id[1]) -- fetch info from server
+    C_QuestLog.GetQuestInfo(self.id[1]) -- fetch info from server
 end
 
 function Quest:IsObtained()
@@ -406,7 +406,7 @@ function Quest:IsObtained()
 end
 
 function Quest:GetText()
-    local name = C_QuestLog.GetTitleForQuestID(self.id[1])
+    local name = C_QuestLog.GetQuestInfo(self.id[1])
     return ns.GetIconLink('quest_ay', 13) .. ' ' .. (name or UNKNOWN)
 end
 
@@ -568,7 +568,7 @@ function Transmog:Prepare()
     if sourceID then CTC.PlayerCanCollectSource(sourceID) end
     C_Item.GetItemSpecInfo(self.item)
     CTC.PlayerHasTransmog(self.item)
-    self.isCosmetic = C_Item.IsCosmeticItem(self.item)
+    -- self.isCosmetic = C_Item.IsCosmeticItem(self.item)
 end
 
 function Transmog:IsEnabled()
@@ -608,7 +608,7 @@ function Transmog:IsObtainable()
     -- Cosmetic cloaks do not behave well with the GetItemSpecInfo() function.
     -- They return an empty table even though you can get the item to drop.
     local _, _, _, ilvl, _, _, _, _, equipLoc = C_Item.GetItemInfo(self.item)
-    if not (ilvl == 1 and equipLoc == 'INVTYPE_CLOAK' and self.isCosmetic) then
+    if not (ilvl == 1 and equipLoc == 'INVTYPE_CLOAK') then
         -- Verify the item drops for any of the players specs
         local specs = C_Item.GetItemSpecInfo(self.item)
         if type(specs) == 'table' and #specs == 0 then return false end

@@ -190,25 +190,3 @@ map.nodes[73805200] = Safari.Toad({
         })
     }
 }) -- Toad
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[37043058] = ns.node.Dragonrace({
-    label = '{quest:75378}',
-    normal = {2317, 69, 64},
-    advanced = {2347, 64, 59},
-    reverse = {2377, 64, 59},
-    rewards = {
-        Achievement({id = 17712, criteria = 6, oneline = true}), -- normal bronze
-        Achievement({id = 17713, criteria = 6, oneline = true}), -- normal silver
-        Achievement({id = 17714, criteria = 6, oneline = true}), -- normal gold
-        Achievement({id = 17715, criteria = 6, oneline = true}), -- advanced bronze
-        Achievement({id = 17716, criteria = 6, oneline = true}), -- advanced silver
-        Achievement({id = 17717, criteria = 6, oneline = true}), -- advanced gold
-        Achievement({id = 17718, criteria = 6, oneline = true}), -- reverse bronze
-        Achievement({id = 17719, criteria = 6, oneline = true}), -- reverse silver
-        Achievement({id = 17720, criteria = 6, oneline = true}) -- reverse gold
-    }
-}) -- Ashenvale Ambit

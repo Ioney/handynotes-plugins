@@ -116,48 +116,6 @@ local function BootstrapDevelopmentEnvironment()
         end)
     end
 
-    if ns:GetOpt('show_debug_currency') then
-        C_Timer.After(2, function()
-            -- Give some time for currency info to load in before we start
-            for id = 1, 3000 do
-                local c = C_CurrencyInfo.GetCurrencyInfo(id) or false
-                if c then currency[id] = c.quantity end
-            end
-            CurrencyFrame:SetScript('OnUpdate', function()
-                if GetTime() - c_lastCheck > 5 and
-                    ns:GetOpt('show_debug_currency') then
-                    for id = 1, 3000 do
-                        local c = C_CurrencyInfo.GetCurrencyInfo(id) or false
-                        if c then
-                            local s = c.quantity
-                            if s ~= currency[id] then
-                                c_changed[#c_changed + 1] = {
-                                    time(), id, currency[id], s
-                                }
-                                currency[id] = s
-                            end
-                        end
-                    end
-
-                    for i, args in ipairs(c_changed) do
-                        table.insert(c_history, 1, args)
-                        print('Currency', args[2], 'changed:', args[3], '=>',
-                            args[4])
-                    end
-
-                    if #c_history > 100 then
-                        for i = #c_history, 101, -1 do
-                            c_history[i] = nil
-                        end
-                    end
-                    c_lastCheck = GetTime()
-                    wipe(c_changed)
-                end
-            end)
-            print('Currency changes are now being tracked')
-        end)
-    end
-
     -- Listen for LCTRL + LALT when the map is open to force display nodes
     local IQFrame = CreateFrame('Frame', ADDON_NAME .. 'IQ', WorldMapFrame)
     local groupPins = WorldMapFrame.pinPools.GroupMembersPinTemplate

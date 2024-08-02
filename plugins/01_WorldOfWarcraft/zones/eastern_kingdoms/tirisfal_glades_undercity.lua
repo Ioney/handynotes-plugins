@@ -61,7 +61,7 @@ map.nodes[592047080] = Safari.LostOfLordaeron({
 }) -- Lost of Lordaeron
 
 undercity.nodes[62403480] = Safari.Maggot({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             48405400, 48605740, 48605880, 55403460, 56006920, 56407000,
@@ -87,7 +87,7 @@ map.nodes[58803380] = Safari.Rat({
 }) -- Rat
 
 undercity.nodes[68803680] = Safari.Roach({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             50806000, 59202900, 59603700, 59803600, 64203340, 65802580,
@@ -100,7 +100,7 @@ undercity.nodes[68803680] = Safari.Roach({
 map.nodes[82405680] = Safari.Spider({pois = {POI({82405680, 86204780})}}) -- Spider
 
 undercity.nodes[56602860] = Safari.UndercityRat({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             48402900, 48605620, 48803020, 50206700, 50406040, 53407520,

@@ -78,7 +78,7 @@ map.nodes[34005140] = Safari.Rabbit({
 }) -- Rabbit
 
 stormwind.nodes[71802880] = Safari.Rabbit({
-    parent = map.id,
+    -- parent =map.id,
     pois = {
         POI({
             50608720, 69802380, 70002340, 71802880, 72002820, 79406440,
@@ -126,7 +126,7 @@ map.nodes[48806540] = Safari.SmallFrog({
 }) -- Small Frog
 
 stormwind.nodes[49608160] = Safari.Squirrel({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             44207980, 44208240, 44208260, 44408100, 44607960, 47608700,
@@ -159,7 +159,7 @@ map.nodes[44405520] = Safari.Squirrel({
 }) -- Squirrel
 
 stormwind.nodes[59404100] = Safari.StormwindRat({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             44804520, 45605940, 45605960, 49405020, 49605040, 49805120,
@@ -203,7 +203,7 @@ map.nodes[44215344] = ns.node.CrazyForCats({
 }) -- Donni Anthania - Cat Carrier (Bombay), Cat Carrier (Cornish Rex), Cat Carrier (Orange Tabby), Cat Carrier (Silver Tabby)
 
 stormwind.nodes[44215344] = ns.node.CrazyForCats({
-    parent = map.id,
+    -- parent = map.id,
     faction = 'Alliance',
     note = L['cfc_lil_timmy'],
     id = 8666,
@@ -218,25 +218,3 @@ stormwind.nodes[44215344] = ns.node.CrazyForCats({
         ns.reward.Pet({item = 8488, id = 45})
     }
 }) -- Lil Timmy - White Kitten
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[10001000] = ns.node.Dragonrace({
-    label = '{quest:76397}',
-    -- normal = {nil, nil, nil},
-    -- advanced = {nil, nil, nil},
-    -- reverse = {nil, nil, nil},
-    rewards = {
-        Achievement({id = 18566, criteria = 6, oneline = true}), -- normal bronze
-        Achievement({id = 18567, criteria = 6, oneline = true}), -- normal silver
-        Achievement({id = 18568, criteria = 6, oneline = true}), -- normal gold
-        Achievement({id = 18569, criteria = 6, oneline = true}), -- advanced bronze
-        Achievement({id = 18570, criteria = 6, oneline = true}), -- advanced silver
-        Achievement({id = 18571, criteria = 6, oneline = true}), -- advanced gold
-        Achievement({id = 18572, criteria = 6, oneline = true}), -- reverse bronze
-        Achievement({id = 18573, criteria = 6, oneline = true}), -- reverse silver
-        Achievement({id = 18574, criteria = 6, oneline = true}) -- reverse gold
-    }
-}) -- Elwynn Forest Flash

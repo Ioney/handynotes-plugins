@@ -74,7 +74,7 @@ map.nodes[36808160] = Safari.ScarabHatchling({
 }) -- Scarab Hatchling
 
 fallenkingdom.nodes[58001680] = Safari.ScarabHatchling({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             40203060, 40403040, 40603020, 43603600, 46004760, 46202800,
@@ -116,7 +116,7 @@ map.nodes[42206840] = Safari.Sidewinder({
 }) -- Sidewinder
 
 fallenkingdom.nodes[49001240] = Safari.Sidewinder({
-    parent = map.id,
+    -- parent = map.id,
     pois = {
         POI({
             40403040, 46004800, 47200840, 49001240, 50405420, 51403120,
@@ -142,25 +142,3 @@ map.nodes[45403680] = Safari.SpikyLizard({
         })
     }
 }) -- Spiky Lizard
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[39548419] = ns.node.Dragonrace({
-    label = '{quest:75472}',
-    normal = {2325, 80, 75},
-    advanced = {2355, 71, 66},
-    reverse = {2385, 74, 69},
-    rewards = {
-        Achievement({id = 17712, criteria = 14, oneline = true}), -- normal bronze
-        Achievement({id = 17713, criteria = 14, oneline = true}), -- normal silver
-        Achievement({id = 17714, criteria = 14, oneline = true}), -- normal gold
-        Achievement({id = 17715, criteria = 14, oneline = true}), -- advanced bronze
-        Achievement({id = 17716, criteria = 14, oneline = true}), -- advanced silver
-        Achievement({id = 17717, criteria = 14, oneline = true}), -- advanced gold
-        Achievement({id = 17718, criteria = 14, oneline = true}), -- reverse bronze
-        Achievement({id = 17719, criteria = 14, oneline = true}), -- reverse silver
-        Achievement({id = 17720, criteria = 14, oneline = true}) -- reverse gold
-    }
-}) -- Ahn'Qiraj Circuit

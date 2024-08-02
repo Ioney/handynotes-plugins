@@ -109,25 +109,6 @@ L['rep_revered'] = 'Revered'
 L['rep_exalted'] = 'Exalted'
 
 -------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-L['dr_your_best_time'] = 'Your best time:'
-L['dr_your_target_time'] = 'Target time:'
-L['dr_best_time'] = ' - %s: %.3fs'
-L['dr_target_time'] = ' - %s: %ss / %ss'
-L['dr_normal'] = 'Normal'
-L['dr_advanced'] = 'Advanced'
-L['dr_reverse'] = 'Reverse'
-L['dr_challenge'] = 'Challenge'
-L['dr_reverse_challenge'] = 'Reverse Challenge'
-L['dr_storm_race'] = 'Storm Race'
-L['dr_bronze'] = 'Finish the race to get ' .. ns.color.Bronze('Bronze') .. '.'
-L['dr_vendor_note'] = 'Exchange {currency:2588} for drakewatcher manuscripts and transmog.'
-L['options_icons_dragonrace'] = 'Dragonriding Races'
-L['options_icons_dragonrace_desc'] = 'Display all race locations for the zone.'
-
--------------------------------------------------------------------------------
 --------------------------------- CONTEXT MENU --------------------------------
 -------------------------------------------------------------------------------
 

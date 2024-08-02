@@ -421,13 +421,13 @@ local Intro = Class('Intro', Node, {
 function Intro:Initialize(attrs)
     Node.Initialize(self, attrs)
     if self.quest then
-        C_QuestLog.GetTitleForQuestID(self.quest[1]) -- fetch info from server
+        C_QuestLog.GetQuestInfo(self.quest[1]) -- fetch info from server
     end
 end
 
 function Intro.getters:label()
     if self.quest then
-        return C_QuestLog.GetTitleForQuestID(self.quest[1]) or UNKNOWN
+        return C_QuestLog.GetQuestInfo(self.quest[1]) or UNKNOWN
     end
     return UNKNOWN
 end
@@ -498,13 +498,13 @@ local Quest = Class('Quest', Node,
 
 function Quest:Initialize(attrs)
     Node.Initialize(self, attrs)
-    C_QuestLog.GetTitleForQuestID(self.quest[1]) -- fetch info from server
+    C_QuestLog.GetQuestInfo(self.quest[1]) -- fetch info from server
 end
 
 function Quest.getters:icon() return self.daily and 'quest_ab' or 'quest_ay' end
 
 function Quest.getters:label()
-    return C_QuestLog.GetTitleForQuestID(self.quest[1]) or UNKNOWN
+    return C_QuestLog.GetQuestInfo(self.quest[1]) or UNKNOWN
 end
 
 -------------------------------------------------------------------------------

@@ -55,8 +55,8 @@ function Currency:Initialize(id, count)
 end
 
 function Currency:IsMet()
-    local info = C_CurrencyInfo.GetCurrencyInfo(self.id)
-    return info and info.quantity >= self.count
+    local info = GetCurrencyInfo(self.id)
+    return info and info[2] >= self.count
 end
 
 -------------------------------------------------------------------------------
@@ -151,7 +151,7 @@ function Quest:Initialize(id, text, repeatable)
 end
 
 function Quest:GetText()
-    local text = C_QuestLog.GetTitleForQuestID(self.id) or self.text or UNKNOWN
+    local text = C_QuestLog.GetQuestInfo(self.id) or self.text or UNKNOWN
     return ('%s (%s)'):format(text, self.type)
 end
 

@@ -4,7 +4,18 @@ local ADDON_NAME, ns = ...
 ------------------------------ DATAMINE TOOLTIP -------------------------------
 -------------------------------------------------------------------------------
 
-local NameResolver = {cache = {}, prepared = {}}
+local function CreateDatamineTooltip(name)
+    local f = CreateFrame('GameTooltip', name, UIParent, 'GameTooltipTemplate')
+    f:SetOwner(UIParent, 'ANCHOR_NONE')
+    return f
+end
+
+local NameResolver = {
+    cache = {},
+    prepared = {},
+    preparer = CreateDatamineTooltip(ADDON_NAME .. '_NamePreparer'),
+    resolver = CreateDatamineTooltip(ADDON_NAME .. '_NameResolver')
+}
 
 function NameResolver:IsLink(link)
     if link == nil then return link end
@@ -16,7 +27,7 @@ function NameResolver:Prepare(link)
         -- use a separate tooltip to spam load NPC names, doing this with the
         -- main tooltip can sometimes cause it to become unresponsive and never
         -- update its text until a reload
-        C_TooltipInfo.GetHyperlink(link)
+        self.preparer:SetHyperlink(link)
         self.prepared[link] = true
     end
 end
@@ -32,14 +43,11 @@ function NameResolver:Resolve(link)
 
     local name = self.cache[link]
     if name == nil then
-        name = UNKNOWN
-        local tooltipData = C_TooltipInfo.GetHyperlink(link)
-        if tooltipData then
-            local line = tooltipData.lines and tooltipData.lines[1]
-            if line then name = line.leftText or UNKNOWN end
-        end
+        self.resolver:SetHyperlink(link)
+        name = _G[self.resolver:GetName() .. 'TextLeft1']:GetText() or UNKNOWN
         if name == UNKNOWN then
-            ns.Debug('NameResolver returned UNKNOWN')
+            ns.Debug('NameResolver returned UNKNOWN, recreating tooltip ...')
+            self.resolver = CreateDatamineTooltip(ADDON_NAME .. '_NameResolver')
         else
             self.cache[link] = name
         end
@@ -87,8 +95,8 @@ local function PrepareLinks(str)
             NameResolver:Prepare(('unit:Creature-0-0-0-0-%d'):format(id))
         elseif type == 'item' then
             C_Item.RequestLoadItemDataByID(id) -- prime item info
-        elseif type == 'daily' or type == 'quest' then
-            C_QuestLog.RequestLoadQuestByID(id) -- prime quest title
+            -- elseif type == 'daily' or type == 'quest' then
+            --     C_QuestLog.RequestLoadQuestByID(id) -- prime quest title
         elseif type == 'spell' then
             C_Spell.RequestLoadSpellData(id) -- prime spell info
         end
@@ -115,12 +123,12 @@ local function RenderLinks(str, nameOnly)
                 end
             end
         elseif type == 'currency' then
-            local info = C_CurrencyInfo.GetCurrencyInfo(id)
+            local info = {GetCurrencyInfo(id)}
             if info then
-                if nameOnly then return info.name end
-                local link = C_CurrencyInfo.GetCurrencyLink(id, 0)
+                if nameOnly then return info[1] end
+                local link = GetCurrencyLink(id, 0)
                 if link then
-                    return '|T' .. info.iconFileID .. ':0|t ' .. link
+                    return '|T' .. info[3] .. ':0|t ' .. link
                 end
             end
         elseif type == 'faction' then
@@ -134,7 +142,7 @@ local function RenderLinks(str, nameOnly)
                            ('|T' .. icon .. ':0|t ' .. link)
             end
         elseif type == 'daily' or type == 'quest' then
-            local name = C_QuestLog.GetTitleForQuestID(id)
+            local name = C_QuestLog.GetQuestInfo(id)
             if name then
                 if nameOnly then return name end
                 local icon = type == 'daily' and 'quest_ab' or 'quest_ay'

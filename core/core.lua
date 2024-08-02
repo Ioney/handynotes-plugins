@@ -37,18 +37,6 @@ local function InitializeDropdownMenu(level, mapID, coord)
 
         LibDD:UIDropDownMenu_AddButton(spacer, level)
 
-        LibDD:UIDropDownMenu_AddButton({
-            text = L['context_menu_set_waypoint'],
-            notCheckable = 1,
-            disabled = not C_Map.CanSetUserWaypointOnMap(mapID),
-            func = function(button)
-                local x, y = HandyNotes:getXY(coord)
-                C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(mapID, x,
-                    y))
-                C_SuperTrack.SetSuperTrackedUserWaypoint(true)
-            end
-        }, level)
-
         if select(2, C_AddOns.IsAddOnLoaded('TomTom')) then
             -- Add spacer before TomTom section
             LibDD:UIDropDownMenu_AddButton(spacer, level)
@@ -258,8 +246,6 @@ function Addon:RegisterWithHandyNotes()
         'PLAYER_MONEY', -- player earned gold
         'PLAYER_REGEN_ENABLED', -- exited combat
         'QUEST_TURNED_IN', -- complete button pressed or WQ completed
-        'SHOW_LOOT_TOAST_UPGRADE', -- special loot obtained w/ upgrades
-        'SHOW_LOOT_TOAST', -- special loot obtained
         'ZONE_CHANGED_NEW_AREA' -- player entered new zone
     }, 2, 'Refresh')
 

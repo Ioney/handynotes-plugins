@@ -20,7 +20,7 @@ local map = ns.Map({id = 210, settings = true})
 -------------------------------------------------------------------------------
 
 map.nodes[52804360] = Safari.Beetle({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             31202800, 31401940, 31401980, 32602080, 34602060, 35603000,
@@ -43,7 +43,7 @@ map.nodes[52804360] = Safari.Beetle({
 }) -- Beetle
 
 map.nodes[63208080] = Safari.BabyApe({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             58408840, 58608840, 58608860, 60207820, 60208720, 60208760,
@@ -57,7 +57,7 @@ map.nodes[63208080] = Safari.BabyApe({
 }) -- Baby Ape
 
 map.nodes[51405360] = Safari.CrimsonMoth({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             47605820, 48805860, 49205540, 49205560, 49205740, 49405840,
@@ -69,7 +69,7 @@ map.nodes[51405360] = Safari.CrimsonMoth({
 }) -- Crimson Moth
 
 map.nodes[46205540] = Safari.ForestSpiderling({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             40604440, 40607820, 44207660, 44804200, 46205540, 46603620,
@@ -81,7 +81,7 @@ map.nodes[46205540] = Safari.ForestSpiderling({
 }) -- Forest Spiderling
 
 map.nodes[50804120] = Safari.LizardHatchling({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             39204840, 39204860, 39205040, 40405500, 40407820, 40607820,
@@ -104,7 +104,7 @@ map.nodes[50804120] = Safari.LizardHatchling({
 }) -- Lizard Hatchling
 
 map.nodes[42006840] = Safari.LongTailedMole({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             39807240, 39807260, 41607300, 42006840, 42006860, 42607180,
@@ -114,7 +114,7 @@ map.nodes[42006840] = Safari.LongTailedMole({
 }) -- Long-Tailed Mole
 
 map.nodes[42007440] = Safari.Roach({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             39807260, 41607300, 42006840, 42007440, 42007460, 43007160, 43207120
@@ -123,7 +123,7 @@ map.nodes[42007440] = Safari.Roach({
 }) -- Roach
 
 map.nodes[45608320] = Safari.StrandCrab({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             33403100, 33403840, 33603120, 34403200, 34403480, 34403900,
@@ -156,7 +156,7 @@ map.nodes[45608320] = Safari.StrandCrab({
 }) -- Strand Crab
 
 map.nodes[49803540] = Safari.TreePython({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             36805220, 37204720, 39204820, 39204860, 39405040, 40405500,
@@ -182,7 +182,7 @@ map.nodes[49803540] = Safari.TreePython({
 }) -- Tree Python
 
 map.nodes[42607260] = Safari.WharfRat({
-    parent = 224,
+    -- parent = 224,
     pois = {
         POI({
             39806740, 40406760, 41206840, 41406860, 42007440, 42007460,
@@ -191,25 +191,3 @@ map.nodes[42607260] = Safari.WharfRat({
         })
     }
 }) -- Wharf Rat
-
--------------------------------------------------------------------------------
---------------------------------- DRAGONRACES ---------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[10001000] = ns.node.Dragonrace({
-    label = '{quest:76515}',
-    -- normal = {nil, nil, nil},
-    -- advanced = {nil, nil, nil},
-    -- reverse = {nil, nil, nil},
-    rewards = {
-        Achievement({id = 18566, criteria = 11, oneline = true}), -- normal bronze
-        Achievement({id = 18567, criteria = 11, oneline = true}), -- normal silver
-        Achievement({id = 18568, criteria = 11, oneline = true}), -- normal gold
-        Achievement({id = 18569, criteria = 11, oneline = true}), -- advanced bronze
-        Achievement({id = 18570, criteria = 11, oneline = true}), -- advanced silver
-        Achievement({id = 18571, criteria = 11, oneline = true}), -- advanced gold
-        Achievement({id = 18572, criteria = 11, oneline = true}), -- reverse bronze
-        Achievement({id = 18573, criteria = 11, oneline = true}), -- reverse silver
-        Achievement({id = 18574, criteria = 11, oneline = true}) -- reverse gold
-    }
-}) -- Booty Bay Blast
