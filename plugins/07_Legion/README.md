@@ -1,1 +1,0 @@
-**A [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin for the Legion expansion. It will add the locations and rewards for rare mobs, battle pets, treasures and other miscellaneous points of interest to the map.**
