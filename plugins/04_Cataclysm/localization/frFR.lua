@@ -9,9 +9,6 @@ if not L then return end
 
 L['change_map'] = 'Changer la carte'
 
-L['options_icons_safari'] = 'Safari en Kalimdor / dans les Royaumes de l\'Est'
-L['options_icons_safari_desc'] = 'Afficher les emplacements des familiers de combat pour les hauts-faits {achievement:6585} et {achievement:6586}.'
-
 -------------------------------------------------------------------------------
 --------------------------------- MOUNT HYJAL ---------------------------------
 -------------------------------------------------------------------------------
