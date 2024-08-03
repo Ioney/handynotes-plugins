@@ -12,7 +12,6 @@ local NPC = ns.node.NPC
 local Rare = ns.node.Rare
 
 local Achievement = ns.reward.Achievement
-local Pet = ns.reward.Pet
 
 -------------------------------------------------------------------------------
 
@@ -77,20 +76,4 @@ ns.node.AnniversaryNPC = Class('AnniversaryNPC', NPC, {
         if not IsAnniversaryEvent() then return false end
         return Rare.IsEnabled(self)
     end
-})
-
--------------------------------------------------------------------------------
-------------------------------- CRAZY FOR CATS --------------------------------
--------------------------------------------------------------------------------
-
-ns.node.CrazyForCats = Class('CrazyForCats', Collectible,
-    {icon = 656579, group = ns.groups.CRAZYFORCATS})
-
--------------------------------------------------------------------------------
------------------------------ ZUL'GURUB (10.0.7) ------------------------------
--------------------------------------------------------------------------------
-
-ns.groups.SECRETS_OF_ZULGURUB = ns.Group('secrets_of_zulgurub', 132528, {
-    defaults = ns.GROUP_HIDDEN,
-    type = ns.group_types.EXPANSION
 })

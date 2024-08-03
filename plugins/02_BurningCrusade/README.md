@@ -1,4 +1,4 @@
-**A [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin for the Burning Crusade expansion. It will add the locations and rewards for rare mobs, battle pets, treasures and other miscellaneous points of interest to the map.**
+**A [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin for the Burning Crusade zones on Cataclysm Classic. It will add the locations and rewards for rare mobs, battle pets, treasures and other miscellaneous points of interest to the map.**
 
 ## Global Features
 
@@ -10,7 +10,7 @@ Rare mobs are listed as skulls on your map. If the skull is blue colored, that m
 
 Right-clicking a node to bring up its context menu. From this menu you can:
 
-* Create a Blizzard or TomTom waypoint
+* Create a TomTom waypoint
 * Hide this node or restore all hidden nodes
 
 ### Quick Toggle Menu

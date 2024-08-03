@@ -8,7 +8,6 @@ local Rare = ns.node.Rare
 
 local Achievement = ns.reward.Achievement
 local Transmog = ns.reward.Transmog
-local Pet = ns.reward.Pet
 
 local POI = ns.poi.POI
 
@@ -72,21 +71,3 @@ map.nodes[67606040] = Rare({
         })
     }
 }) -- Nuramoc
-
--------------------------------------------------------------------------------
-------------------------------- CRAZY FOR CATS --------------------------------
--------------------------------------------------------------------------------
-
-map.nodes[43523526] = ns.node.Collectible({
-    id = 20980,
-    icon = 656579,
-    group = ns.groups.CRAZYFORCATS,
-    rewards = {
-        Achievement({id = 8397, criteria = 23591, oneline = true}),
-        Pet({item = 8490, id = 44}), Pet({item = 8495, id = 51}),
-        Pet({item = 10392, id = 78}), Pet({item = 10393, id = 55}),
-        Pet({item = 29363, id = 136}), Pet({item = 29364, id = 137}),
-        Pet({item = 29902, id = 139}), Pet({item = 29958, id = 145})
-    }
-}) -- Dealer Rashaad - Siamese Cat
-

@@ -1,1 +1,1 @@
-**A [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin for original World of Warcraft zones on retail. It will add the locations and rewards for rare mobs, battle pets, treasures and other miscellaneous points of interest to the map.**
+**A [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) plugin for original World of Warcraft zones on Cataclysm Classic. It will add the locations and rewards for rare mobs, battle pets, treasures and other miscellaneous points of interest to the map.**
