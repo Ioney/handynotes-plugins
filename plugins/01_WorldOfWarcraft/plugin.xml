@@ -30,7 +30,7 @@
   <Script file="zones\kalimdor\azshara.lua"/>
   <!-- <Script file="zones\kalimdor\azuremyst_isle_exodar.lua"/> -->
   <!-- <Script file="zones\kalimdor\bloodmyst_isle.lua"/> -->
-  <Script file="zones\kalimdor\caverns_of_time.lua"/>
+  <!-- <Script file="zones\kalimdor\caverns_of_time.lua"/> -->
   <!-- <Script file="zones\kalimdor\darkshore.lua"/> -->
   <!-- <Script file="zones\kalimdor\desolace.lua"/> -->
   <!-- <Script file="zones\kalimdor\durotar_orgrimmar.lua"/> -->

@@ -5,6 +5,7 @@ local ADDON_NAME, ns = ...
 local L = ns.locale
 
 local Mount = ns.reward.Mount
+local Pet = ns.reward.Pet
 local Spacer = ns.reward.Spacer
 local Toy = ns.reward.Toy
 local Transmog = ns.reward.Transmog
@@ -13,7 +14,7 @@ local Transmog = ns.reward.Transmog
 ------------------------------------- MAP -------------------------------------
 -------------------------------------------------------------------------------
 
-local map = ns.Map({id = 71, settings = true})
+local map = ns.Map({id = 1446, settings = true})
 
 -------------------------------------------------------------------------------
 ------------------------------------ RARES ------------------------------------
@@ -40,3 +41,14 @@ map.nodes[64405070] = ns.node.AnniversaryRare({
         Toy({item = 186501}) -- Doomwalker Trophy Stand
     }
 }) -- Doomwalker
+
+map.nodes[50704110] = ns.node.AnniversaryNPC({ -- TODO: if Anniversary Event is relevant for Classic: coords need to be updated. was moved from caverns of time.
+    id = 158061,
+    icon = 136235,
+    rewards = {
+        Transmog({item = 147885}), -- Bronze-Tinted Sunglasses
+        Transmog({item = 178514, slot = L['cloak']}), -- Crafted Cloak of War
+        Pet({item = 136925, id = 1890}), -- Corgi Pup
+        Pet({item = 186556, id = 3100}) -- Timeless Mechanical Dragonling
+    }
+}) -- Historian Ma'di
