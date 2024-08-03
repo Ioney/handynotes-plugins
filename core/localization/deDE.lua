@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = 'Zeigt die Uhrzeit im 12-Stunden-Fo
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = 'Entwicklung'
-L['options_toggle_show_debug_currency'] = 'Debug Währungs IDs'
-L['options_toggle_show_debug_currency_desc'] = 'Zeigt Debug-Informationen für Änderungen bei Währungs-IDs an (Neuladen erforderlich).'
 L['options_toggle_show_debug_map'] = 'Debug Karten IDs'
 L['options_toggle_show_debug_map_desc'] = 'Zeigt Debug-Informationen für Karten an.'
 L['options_toggle_show_debug_quest'] = 'Debug Quest IDs'

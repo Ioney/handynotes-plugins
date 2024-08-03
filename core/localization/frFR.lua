@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = 'Utiliser l\'horloge de 12 heures (
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = 'Développement'
-L['options_toggle_show_debug_currency'] = 'Debug ID monnaies'
-L['options_toggle_show_debug_currency_desc'] = 'Afficher les informations de debug pour les variations de monnaies (rechargement nécessaire)'
 L['options_toggle_show_debug_map'] = 'Debug ID Carte' -- Need review
 L['options_toggle_show_debug_map_desc'] = 'Afficher les informations de déboguage pour les cartes'
 L['options_toggle_show_debug_quest'] = 'Debug ID Quête'

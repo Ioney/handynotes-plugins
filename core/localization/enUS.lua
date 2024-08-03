@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = 'Use 12-hour clock (ex: 8:00 PM) in
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = 'Development'
-L['options_toggle_show_debug_currency'] = 'Debug Currency IDs'
-L['options_toggle_show_debug_currency_desc'] = 'Show debug info for currency changes (reload required)'
 L['options_toggle_show_debug_map'] = 'Debug Map IDs'
 L['options_toggle_show_debug_map_desc'] = 'Show debug information for maps'
 L['options_toggle_show_debug_quest'] = 'Debug Quest IDs'

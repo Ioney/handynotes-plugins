@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = '在提示使用12小時制 (例. 8
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = '開發'
-L['options_toggle_show_debug_currency'] = '偵錯通貨ID'
-L['options_toggle_show_debug_currency_desc'] = '顯示通貨的偵錯資訊'
 L['options_toggle_show_debug_map'] = '偵錯地圖ID'
 L['options_toggle_show_debug_map_desc'] = '顯示地圖的偵錯資訊'
 L['options_toggle_show_debug_quest'] = '偵錯任務ID'

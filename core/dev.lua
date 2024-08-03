@@ -57,13 +57,6 @@ local function BootstrapDevelopmentEnvironment()
         desc = L['options_toggle_force_nodes_desc'],
         order = 103
     }
-    ns.options.args.GeneralTab.args.show_debug_currency = {
-        type = 'toggle',
-        arg = 'show_debug_currency',
-        name = L['options_toggle_show_debug_currency'],
-        desc = L['options_toggle_show_debug_currency_desc'],
-        order = 104
-    }
 
     -- Print debug messages for each quest ID that is flipped
     local QTFrame = CreateFrame('Frame', ADDON_NAME .. 'QT')
@@ -72,12 +65,6 @@ local function BootstrapDevelopmentEnvironment()
     local quests = {}
     local changed = {}
     local max_quest_id = 100000
-
-    local CurrencyFrame = CreateFrame('Frame', ADDON_NAME .. 'C')
-    local c_lastCheck = GetTime()
-    local c_history = ns.GetDatabaseTable('currency_id_history')
-    local currency = {}
-    local c_changed = {}
 
     if ns:GetOpt('show_debug_quest') then
         C_Timer.After(2, function()
@@ -188,23 +175,6 @@ _G[ADDON_NAME .. 'QuestHistory'] = function(count)
             time = 'MISSING'
         else
             time, id, old, new = unpack(history[i])
-            time = date('%H:%M:%S', time)
-        end
-        print(time, '::', id, '::', old, '=>', new)
-    end
-end
-
-_G[ADDON_NAME .. 'CurrencyHistory'] = function(count)
-    local c_history = ns.GetDatabaseTable('currency_id_history')
-    if #c_history == 0 then return print('Currency history is empty') end
-    for i = 1, (count or 10) do
-        if i > #c_history then break end
-        local time, id, old, new, _
-        if c_history[i][1] == 'Currency' then
-            _, id, _, old, _, new = unpack(c_history[i])
-            time = 'MISSING'
-        else
-            time, id, old, new = unpack(c_history[i])
             time = date('%H:%M:%S', time)
         end
         print(time, '::', id, '::', old, '=>', new)

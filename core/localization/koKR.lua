@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = nil
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = '개발도구'
-L['options_toggle_show_debug_currency'] = nil
-L['options_toggle_show_debug_currency_desc'] = nil
 L['options_toggle_show_debug_map'] = nil
 L['options_toggle_show_debug_map_desc'] = nil
 L['options_toggle_show_debug_quest'] = nil

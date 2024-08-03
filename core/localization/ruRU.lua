@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = 'Используйте 12-часо
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = 'Разработка'
-L['options_toggle_show_debug_currency'] = 'Отладка ID валюты'
-L['options_toggle_show_debug_currency_desc'] = 'Показать отладочную информацию для изменений валюты (требуется перезагрузка)'
 L['options_toggle_show_debug_map'] = 'Отладка идентификаторов карты'
 L['options_toggle_show_debug_map_desc'] = 'Показать отладочную информацию для карт'
 L['options_toggle_show_debug_quest'] = 'Отлаживать'

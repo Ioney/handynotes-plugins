@@ -217,8 +217,6 @@ L['options_toggle_use_standard_time_desc'] = 'Usa el reloj de 12-horas (ej: 8:00
 --------------------------------- DEVELOPMENT ---------------------------------
 
 L['options_dev_settings'] = 'Desarrollo'
-L['options_toggle_show_debug_currency'] = 'Depurar las ID de las Monedas'
-L['options_toggle_show_debug_currency_desc'] = 'Muestra información de depuración para cambios de moneda (requiere hacer reload)'
 L['options_toggle_show_debug_map'] = 'Depurar las ID del Mapa'
 L['options_toggle_show_debug_map_desc'] = 'Muestra información de depuración para los mapas'
 L['options_toggle_show_debug_quest'] = 'Depurar IDs de las Misiones'
