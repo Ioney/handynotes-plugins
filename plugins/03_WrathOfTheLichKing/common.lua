@@ -21,7 +21,7 @@ ns.groups.SQUIRRELS = Group('squirrels', 237182, {defaults = ns.GROUP_HIDDEN})
 ------------------- TO ALL THE SQUIRRELS WHO SHARED MY LIFE -------------------
 -------------------------------------------------------------------------------
 
-local Squirrel = Class('Squirrel', Collectible, {
+local Squirrel = Class('Squirrel', ns.node.Collectible, {
     group = ns.groups.SQUIRRELS,
     icon = 237182,
     note = L['squirrels_note']

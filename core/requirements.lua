@@ -60,42 +60,6 @@ function Currency:IsMet()
 end
 
 -------------------------------------------------------------------------------
-------------------------------- GARRISON TALENT -------------------------------
--------------------------------------------------------------------------------
-
-local GarrisonTalent = Class('GarrisonTalent', Requirement)
-
-function GarrisonTalent:Initialize(id, text) self.id, self.text = id, text end
-
-function GarrisonTalent:GetText()
-    local info = C_Garrison.GetTalentInfo(self.id)
-    return self.text == UNKNOWN and info.name or self.text:format(info.name)
-end
-
-function GarrisonTalent:IsMet()
-    local info = C_Garrison.GetTalentInfo(self.id)
-    return info and info.researched
-end
-
--------------------------------------------------------------------------------
------------------------------ GARRISON TALENT RANK ----------------------------
--------------------------------------------------------------------------------
-
-local GarrisonTalentRank = Class('GarrisonTalentRank', Requirement)
-
-function GarrisonTalentRank:Initialize(id, rank) self.id, self.rank = id, rank end
-
-function GarrisonTalentRank:GetText()
-    local info = C_Garrison.GetTalentInfo(self.id)
-    return L['ranked_research']:format(info.name, self.rank, info.talentMaxRank)
-end
-
-function GarrisonTalentRank:IsMet()
-    local info = C_Garrison.GetTalentInfo(self.id)
-    return info and info.talentRank and info.talentRank >= self.rank
-end
-
--------------------------------------------------------------------------------
 ------------------------------------ ITEM -------------------------------------
 -------------------------------------------------------------------------------
 
@@ -207,29 +171,15 @@ local Toy = Class('Toy', Item, {type = L['toy']})
 function Toy:IsMet() return PlayerHasToy(self.id) end
 
 -------------------------------------------------------------------------------
------------------------------------ WAR MODE ----------------------------------
--------------------------------------------------------------------------------
-
-local WarMode = Class('WarMode', Requirement, {
-    text = PVP_LABEL_WAR_MODE,
-    IsMet = function()
-        return C_PvP.IsWarModeActive() or C_PvP.IsWarModeDesired()
-    end
-})()
-
--------------------------------------------------------------------------------
 
 ns.requirement = {
     Achievement = Achievement,
     Currency = Currency,
-    GarrisonTalent = GarrisonTalent,
-    GarrisonTalentRank = GarrisonTalentRank,
     Item = Item,
     Profession = Profession,
     Quest = Quest,
     Reputation = Reputation,
     Requirement = Requirement,
     Spell = Spell,
-    Toy = Toy,
-    WarMode = WarMode
+    Toy = Toy
 }
